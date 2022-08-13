@@ -8,11 +8,15 @@
 import Router from '@/router/index.js'
 import store from '@/store/index.js'
 const whiteList = ['/login']
-Router.beforeEach((to, from, next) => {
+Router.beforeEach(async (to, from, next) => {
   if (store.getters.token) {
     if (to.path === '/login') {
       next('/')
     } else {
+      if (!store.getters.hasUserInfo) {
+        console.log('获取用户信息')
+        await store.dispatch('user/getUserInfo')
+      }
       next()
     }
   } else {

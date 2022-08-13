@@ -30,6 +30,7 @@ module.exports = {
         target: 'https://api.imooc-admin.lgdsunday.club/',
         changeOrigin: true
       }
-    }
+    },
+    hot: true
   }
 }
