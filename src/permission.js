@@ -14,7 +14,6 @@ Router.beforeEach(async (to, from, next) => {
       next('/')
     } else {
       if (!store.getters.hasUserInfo) {
-        console.log('获取用户信息')
         await store.dispatch('user/getUserInfo')
       }
       next()

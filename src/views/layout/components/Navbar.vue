@@ -3,6 +3,7 @@
     <Hamburger class="hamburger-container"/>
     <Breadcrumb class="breadcrumb-container" />
     <div class="right">
+      <LangSelect class="lang-select"/>
       <el-dropdown trigger="click">
         <div class="avatar-wrapper">
           <el-avatar
@@ -29,6 +30,7 @@ import { useStore } from 'vuex'
 import Router from '@/router/index.js'
 import Hamburger from '@/components/hamburger.vue'
 import Breadcrumb from '@/components/Breadcrumb.vue'
+import LangSelect from '@/components/LangSelect/index.vue'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
@@ -39,6 +41,16 @@ const logout = () => {
 <style lang="scss" scoped>
 .right {
   float: right;
+  ::v-deep(.lang-select) {
+    padding: 0 18px 0 0;
+    color: #5a5e66;
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: text-bottom;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 ::v-deep(.avatar-wrapper) {
     overflow: hidden;

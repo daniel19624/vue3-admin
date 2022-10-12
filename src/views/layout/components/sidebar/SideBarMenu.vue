@@ -27,7 +27,6 @@ const activeMenu = computed(() => {
   const { path } = useRoute()
   return path
 })
-console.log(JSON.stringify(routes.value))
 </script>
 
 <style scoped lang="less">

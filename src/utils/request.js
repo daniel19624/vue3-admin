@@ -9,7 +9,9 @@ const service = axios.create({
 
 // 设置请求拦截器
 service.interceptors.request.use(config => {
-  config.headers.icode = '986D83B9A59EF15B'
+  // config.headers.icode = '986D83B9A59EF15B'
+  config.headers.icode = '3796B0E53DFF92CE'
+
   if (store.state.user.token) {
     if (isCheckTimeOut()) {
       // token 过期

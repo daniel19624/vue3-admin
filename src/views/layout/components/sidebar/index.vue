@@ -2,7 +2,7 @@
   <div class="sidebar-container">
     <div class="logo-container">
       <el-avatar
-      size="44"
+      :size="44"
       shape="square"
       src="https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png">
       </el-avatar>
@@ -17,10 +17,8 @@
 <script setup>
 import SidebarMenu from './SideBarMenu'
 
-import { useRouter } from 'vue-router'
-const router = useRouter()
-
-console.log(router.getRoutes())
+// import { useRouter } from 'vue-router'
+// const router = useRouter()
 </script>
 
 <style lang="scss" scoped>

@@ -8,3 +8,7 @@ export const TOKEN = 'token'
 export const TIME_STAMP = 'timeStamp'
 
 export const TOKEN_TIME_OUT_VALUE = 2 * 3600 * 1000
+
+// 国际化
+
+export const LANG = 'language'
